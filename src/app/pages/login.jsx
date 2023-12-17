@@ -1,7 +1,6 @@
 // pages/login.js
 import Image from "next/image";
 import Link from "next/link";
-import Head from "next/head";
 
 export default function Login() {
   return (
@@ -27,11 +26,14 @@ export default function Login() {
       </div>
 
       {/* Right Side with the Form */}
-      <div className="w-full lg:w-4/12  px-16 pt-16 bg-white items-center justify-center ">
-        <h1 className="text-2xl font-semibold mb-2 mt-6 text-gray-700">
+      {/* <div className="w-full lg:w-4/12  px-16 pt-16 bg-white items-center justify-center "> */}
+      <div className="flex flex-col w-full lg:w-4/12 px-6 lg:px-16  bg-white items-center justify-center">
+        <h1 className="self-start  text-start text-2xl font-semibold mb-2 mt-6 text-gray-700">
           Welcome to Modernize
         </h1>
-        <p className="text-sm text-gray-600 mb-2 ">Your Admin Dashboard</p>
+        <p className="self-start text-sm text-gray-600 mb-2 ">
+          Your Admin Dashboard
+        </p>
 
         {/* Login Form */}
         <form className="mt-6" action="#" method="POST">
@@ -75,25 +77,29 @@ export default function Login() {
             </div>
           </div>
 
-          <div className="flex flex-col  mt-8">
+          <div className="flex flex-col mt-8">
             {/* Username Input */}
-            <label className="block  text-sm font-medium " htmlFor="username">
+            <label className="block text-sm font-medium" htmlFor="username">
               Username
             </label>
             <input
-              className="shadow-none  border rounded-lg w-full py-2 px-4 text-gray-700  focus:outline-none focus:bg-none focus:ring-2 focus:ring-blue-300  mt-2"
+              className="shadow-none border rounded-lg w-full py-2 px-4 bg-transparent focus:outline-none focus:ring-1 focus:ring-custom-blue mt-2"
               type="text"
+              id="username"
+              name="username"
             />
             {/* Password Input */}
             <label
               className="block text-sm font-medium mt-8"
-              htmlFor="username"
+              htmlFor="password"
             >
               Password
             </label>
             <input
-              className="border rounded-lg w-full py-2 px-4 text-gray-700  focus:outline-none focus:bg-none focus:ring-2 focus:ring-blue-300mt-2"
+              className="border rounded-lg w-full py-2 px-4 bg-transparent focus:outline-none focus:ring-1 focus:ring-custom-blue mt-2"
               type="password"
+              id="password"
+              name="password"
             />
           </div>
 
@@ -101,7 +107,7 @@ export default function Login() {
             <label className="flex items-center">
               <input
                 type="checkbox"
-                className="form-checkbox text-indigo-600"
+                className="form-checkbox text-custom-blue"
               />
               <span className="ml-2 text-sm text-gray-600">
                 Remember this Device
