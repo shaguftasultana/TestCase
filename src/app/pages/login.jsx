@@ -28,7 +28,7 @@ export default function Login() {
 
       {/* Right Side with the Form */}
       {/* <div className="w-full lg:w-4/12  px-16 pt-16 bg-white items-center justify-center "> */}
-      <div className="flex flex-col w-full lg:w-4/12 px-8 lg:px-16  bg-white items-center justify-center">
+      <div className="flex flex-col w-full lg:w-4/12 px-16 lg:px-16  bg-white items-center justify-center">
         <h1 className="lg:self-start  text-start text-[1.5rem] font-[700] mb-2 mt-6 text-gray-700">
           Welcome to Modernize
         </h1>
