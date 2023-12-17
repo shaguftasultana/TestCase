@@ -27,18 +27,15 @@ export default function Login() {
       </div>
 
       {/* Right Side with the Form */}
-      {/* <div className="w-full lg:w-4/12  px-16 pt-16 bg-white items-center justify-center "> */}
-      <div className="flex flex-col w-full lg:w-4/12 px-20 lg:px-16  bg-white items-center justify-center">
-        <h1 className="lg:self-start md:self-start self-start text-start text-[1.5rem] font-[700] mb-2 mt-6 text-gray-700">
+      <div className="w-full lg:w-[41%] px-10 md:px-20 pt-8 bg-white items-center justify-center ">
+        <h1 className="text-[22px] md:2xl font-semibold  mb-2 mt-6 text-gray-700">
           Welcome to Modernize
         </h1>
-        <p className="lg:self-start  md:self-start self-start text-[ 0.875rem] font-[400] text-gray-600 mb-2 ">
-          Your Admin Dashboard
-        </p>
+        <p className="text-sm text-gray-600 mb-2 ">Your Admin Dashboard</p>
 
         {/* Login Form */}
         <form className="mt-6" action="#" method="POST">
-          <div className="flex flex-row gap-2">
+          <div className="flex flex-row gap-2 md:gap-2 ">
             {/* Google Sign-in */}
             <button
               type="button"
@@ -50,7 +47,8 @@ export default function Login() {
                 width={16}
                 height={16}
               />
-              <span>Sign in with Google</span>
+              <span className="hidden md:block">Sign in with Google</span>
+              <span className="block md:hidden">Google</span>
             </button>
 
             {/* Facebook Sign-in */}
@@ -64,7 +62,8 @@ export default function Login() {
                 width={40}
                 height={40}
               />
-              <span>Sign in with FB</span>
+              <span className="hidden md:block">Sign in with FB</span>
+              <span className="block md:hidden">FB</span>
             </button>
           </div>
           <div className="relative  my-6">
@@ -132,7 +131,7 @@ export default function Login() {
           </button>
 
           {/* Create Account Link */}
-          <div className=" mt-8 ">
+          <div className=" mt-8 flex ">
             <p className="text-[1rem] font-[500]">
               New to Modernize?
               <Link
