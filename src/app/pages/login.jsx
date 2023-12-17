@@ -6,14 +6,15 @@ export default function Login() {
   return (
     <div className="flex flex-col lg:flex-row min-h-screen  ">
       <div className="radial-gradient-bg lg:w-8/12 ">
-        <div className="my-6  text-center mx-6 ">
+        <Link href="/logo">
           <Image
+            className="mx-6 my-6"
             src="/Images/dark-logo.svg"
             alt="logo"
             width={175}
             height={30}
           />
-        </div>
+        </Link>
         <div className="hidden lg:flex lg:flex-1 items-center justify-center mr-18 mt-20 ">
           <Image
             src="/Images/login-bg.svg"
@@ -27,11 +28,11 @@ export default function Login() {
 
       {/* Right Side with the Form */}
       {/* <div className="w-full lg:w-4/12  px-16 pt-16 bg-white items-center justify-center "> */}
-      <div className="flex flex-col w-full lg:w-4/12 px-6 lg:px-16  bg-white items-center justify-center">
-        <h1 className="self-start  text-start text-2xl font-semibold mb-2 mt-6 text-gray-700">
+      <div className="flex flex-col w-full lg:w-4/12 px-8 lg:px-16  bg-white items-center justify-center">
+        <h1 className="lg:self-start  text-start text-[1.5rem] font-[700] mb-2 mt-6 text-gray-700">
           Welcome to Modernize
         </h1>
-        <p className="self-start text-sm text-gray-600 mb-2 ">
+        <p className="lg:self-start  text-[ 0.875rem] font-[400] text-gray-600 mb-2 ">
           Your Admin Dashboard
         </p>
 
@@ -71,7 +72,7 @@ export default function Login() {
               <div className="w-full border-t border-gray-200"></div>
             </div>
             <div className="relative flex justify-center text-md">
-              <span className="px-2 bg-white text-gray-600">
+              <span className="px-5 bg-white text-gray-600">
                 or sign in with
               </span>
             </div>
@@ -79,7 +80,7 @@ export default function Login() {
 
           <div className="flex flex-col mt-8">
             {/* Username Input */}
-            <label className="block text-sm font-medium" htmlFor="username">
+            <label className="block text-[1rem] font-[600]" htmlFor="username">
               Username
             </label>
             <input
@@ -90,7 +91,7 @@ export default function Login() {
             />
             {/* Password Input */}
             <label
-              className="block text-sm font-medium mt-8"
+              className="block text-[1rem] font-[600] mt-8"
               htmlFor="password"
             >
               Password
@@ -107,15 +108,16 @@ export default function Login() {
             <label className="flex items-center">
               <input
                 type="checkbox"
-                className="form-checkbox text-custom-blue"
+                className="form-checkbox text-custom-blue h-4 w-4"
+                defaultChecked // This ensures the checkbox is checked by default
               />
-              <span className="ml-2 text-sm text-gray-600">
+              <span className="ml-2 text-sm font-medium text-gray-600">
                 Remember this Device
               </span>
             </label>
             <Link
               href="/forgot-password"
-              className="inline-block align-baseline  text-sm text-custom-blue "
+              className="inline-block align-baseline font-[500]  text-[0.875rem] text-custom-blue "
             >
               Forgot Password?
             </Link>
@@ -123,7 +125,7 @@ export default function Login() {
 
           {/* Sign In Button */}
           <button
-            className="w-full bg-custom-blue hover:bg-blue-500 text-white  py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline"
+            className="w-full bg-custom-blue hover:bg-blue-500 text-white text-[0.9375rem] font-[400] py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline"
             type="submit"
           >
             Sign In
@@ -131,11 +133,11 @@ export default function Login() {
 
           {/* Create Account Link */}
           <div className=" mt-8 ">
-            <p className="text-md ">
+            <p className="text-[1rem] font-[500]">
               New to Modernize?
               <Link
                 href="/register"
-                className=" text-sm text-custom-blue  ml-2"
+                className="  text-custom-blue font-[500] text-[0.875rem] ml-2"
               >
                 Create an account
               </Link>
