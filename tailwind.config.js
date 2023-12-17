@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        "custom-blue": "rgb(93, 135, 255)",
+      },
       backgroundImage: {
         "radial-gradient": "radial-gradient(#d2f1df, #d3d7fa, #bad8f4)",
       },
@@ -25,7 +28,7 @@ module.exports = {
             right: 0,
             bottom: 0,
             left: 0,
-            background: "radial-gradient(#d2f1df, #d3d7fa, #bad8f4)",
+            background: "radial-gradient(#d2f1df, #bad8f4 ,#d3d7fa)",
             opacity: "0.3",
             borderRadius: "inherit", // maintain the border-radius of the parent
             zIndex: "-1", // ensure it's behind the content
